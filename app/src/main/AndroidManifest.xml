@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.walter.sc.myjgapplication"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.walter.sc.okhttp.OKHttpActivity">
+        </activity>
+        <activity android:name="com.walter.sc.greendao.NoteActivity">
+        </activity>
+        <activity android:name="com.walter.sc.eventbus.EventBusActivity">
+        </activity>
+        <activity android:name="com.walter.sc.eventbus.EventBus2Activity">
+        </activity>
+        <activity android:name="com.walter.sc.eventbus.MyMainFragmentActivity">
+        </activity>
+        <activity
+            android:name="com.walter.sc.NavigationView.NavigationViewActivity"
+            android:theme="@style/NoActionBarTheme">
+        </activity>
+        <activity
+            android:name="com.walter.sc.tablayout.MyTabActivity"
+            android:theme="@style/NoActionBarTheme">
+        </activity>
+        <activity android:name="com.walter.sc.handheld.HandHeldActivity">
+        </activity>
+
+        <service android:name="com.walter.sc.handheld.PrintBillService"/>
+
+        <activity android:name="com.walter.sc.customControl.CustomCActivity">
+        </activity>
+    </application>
+
+</manifest>
