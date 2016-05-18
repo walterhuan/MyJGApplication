@@ -99,6 +99,7 @@ public class CustomCActivity extends AppCompatActivity {
                 AnimationUtils.rotateInAnim(rl_level3,400);
                 isL2Display = true;
                 isL3Display = true;
+
             }
             isL1Display = !isL1Display;
         }
