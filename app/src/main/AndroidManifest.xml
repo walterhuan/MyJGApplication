@@ -46,6 +46,8 @@
 
         <activity android:name="com.walter.sc.customControl.CustomCActivity">
         </activity>
+        <activity android:name="com.walter.sc.customControl.pictureTakeTurns.PictureTakeTurnsActivity">
+        </activity>
     </application>
 
 </manifest>

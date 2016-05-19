@@ -1,11 +1,14 @@
 package com.walter.sc.customControl;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
+import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.walter.sc.customControl.customUtil.AnimationUtils;
+import com.walter.sc.customControl.pictureTakeTurns.PictureTakeTurnsActivity;
 import com.walter.sc.myjgapplication.R;
 
 import butterknife.Bind;
@@ -104,5 +107,21 @@ public class CustomCActivity extends AppCompatActivity {
             isL1Display = !isL1Display;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ButterKnife.unbind(this);
+
+    }
+
+    public void mBtnClick(View view){
+        switch (view.getId()){
+            case R.id.buttonTTP:
+                Intent intent = new Intent(this, PictureTakeTurnsActivity.class);
+                this.startActivity(intent);
+                break;
+        }
     }
 }

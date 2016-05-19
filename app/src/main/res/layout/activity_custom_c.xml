@@ -134,4 +134,25 @@
 
     </RelativeLayout>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take Turns Play Picture"
+        android:id="@+id/buttonTTP"
+        android:onClick="mBtnClick"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/rl_level3"
+        android:layout_alignStart="@+id/rl_level3"
+        android:layout_marginTop="34dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button2"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/buttonTTP"
+        android:layout_alignLeft="@+id/buttonTTP"
+        android:layout_alignStart="@+id/buttonTTP"/>
+
 </RelativeLayout>
