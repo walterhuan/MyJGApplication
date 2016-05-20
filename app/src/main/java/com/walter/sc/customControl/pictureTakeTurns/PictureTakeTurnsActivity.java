@@ -56,6 +56,8 @@ public class PictureTakeTurnsActivity extends AppCompatActivity implements ViewP
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
+                            if (!isRuning)
+                                return;
                             mViewPager_TTP.setCurrentItem(mViewPager_TTP.getCurrentItem()+1);
                         }
                     });
@@ -192,6 +194,6 @@ public class PictureTakeTurnsActivity extends AppCompatActivity implements ViewP
     protected void onDestroy() {
         super.onDestroy();
         isRuning = false;
-        //ButterKnife.unbind(this);
+        ButterKnife.unbind(this);
     }
 }
