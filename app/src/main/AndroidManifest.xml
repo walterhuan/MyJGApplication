@@ -48,6 +48,10 @@
         </activity>
         <activity android:name="com.walter.sc.customControl.pictureTakeTurns.PictureTakeTurnsActivity">
         </activity>
+        <activity android:name="com.walter.sc.czboke.CZBKMainActivity"
+                  android:screenOrientation="portrait"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+            />
     </application>
 
 </manifest>

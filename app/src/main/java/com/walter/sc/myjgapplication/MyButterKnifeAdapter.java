@@ -14,9 +14,15 @@ import butterknife.ButterKnife;
  * Created by huangxl on 2016/3/30.
  */
 public class MyButterKnifeAdapter extends BaseAdapter {
-    private static final String[] CONTENTS = ("OkHttp GreenDao soundPool EventBus " +
-            "NavigationView MyTabActivity HandHeldActivity " +
-            "CustomControl lazy dog").split(" ");
+    private static final String[] CONTENTS = ("OkHttp " +
+            "GreenDao soundPool " +
+            "EventBus " +
+            "NavigationView " +
+            "MyTabActivity " +
+            "HandHeldActivity " +
+            "CustomControl " +
+            "CZBK框架 " +
+            "dog").split(" ");
 
     private final LayoutInflater inflater;
 

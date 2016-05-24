@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.walter.sc.NavigationView.NavigationViewActivity;
 import com.walter.sc.customControl.CustomCActivity;
+import com.walter.sc.czboke.CZBKMainActivity;
 import com.walter.sc.eventbus.EventBusActivity;
 import com.walter.sc.greendao.NoteActivity;
 import com.walter.sc.handheld.HandHeldActivity;
@@ -110,6 +111,10 @@ public class MainActivity extends AppCompatActivity {
             case 7:
                 Intent intent7 = new Intent(this, CustomCActivity.class);
                 startActivity(intent7);
+                break;
+            case 8:
+                Intent intent8 = new Intent(this, CZBKMainActivity.class);
+                startActivity(intent8);
                 break;
 
 

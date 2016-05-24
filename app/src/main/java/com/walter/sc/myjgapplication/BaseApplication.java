@@ -1,7 +1,10 @@
 package com.walter.sc.myjgapplication;
 
 import android.app.Application;
+import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Handler;
+import android.util.Log;
 
 import com.walter.greendao.DaoMaster;
 import com.walter.greendao.DaoSession;
@@ -16,10 +19,26 @@ public class BaseApplication extends Application{
     public DaoMaster.DevOpenHelper helper;
     public DaoMaster daoMaster;
 
+    public static Context context = null;
+
+    public static Handler handler = null;
+
+    public static Thread mainThread = null;
+
+    public static int mainThreadId = 0;
+
+    public static String COMMONTAG = "COMMON";
+
     @Override
     public void onCreate() {
         super.onCreate();
         setupDatabase();
+        context = getApplicationContext();
+        handler = new Handler();
+        mainThread = Thread.currentThread();
+        Log.e(COMMONTAG, "mainThread=" + mainThread);
+        mainThreadId = android.os.Process.myTid();
+       // CrashHandler.getInstance().init(this);
     }
 
     private  void setupDatabase(){

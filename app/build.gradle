@@ -40,4 +40,5 @@ dependencies {
     compile files('libs/platform_sdk_v2.3.406.jar')
     compile files('libs/HsGpio.jar')
     compile files('libs/IDCReaderSDK.jar')
+    compile 'com.loopj.android:android-async-http:1.4.9'
 }
