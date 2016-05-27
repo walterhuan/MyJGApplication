@@ -118,14 +118,18 @@ public abstract class LoadingPage extends FrameLayout{
         }else{
             client.post(url, params(), new AsyncHttpResponseHandler() {
                 @Override
+                public void onRetry(int retryNo) {
+                    super.onRetry(retryNo);
+                    Log.i(BaseApplication.COMMONTAG,"onRetry="+retryNo);
+                }
+
+                @Override
                 public void onFinish() {
-                    Log.i(BaseApplication.COMMONTAG,"LoadingPageOnFinish======");
-                    super.onFinish();
+                    Log.i(BaseApplication.COMMONTAG, "LoadingPageOnFinish======");
                 }
 
                 @Override
                 public void onCancel() {
-                    super.onCancel();
                     Log.i(BaseApplication.COMMONTAG, "LoadingPageonCancel======");
                 }
 
@@ -144,7 +148,7 @@ public abstract class LoadingPage extends FrameLayout{
 
                 @Override
                 public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
-                    Log.i(BaseApplication.COMMONTAG, "LoadingPageOnFailure======" + new String(bytes));
+                    Log.i(BaseApplication.COMMONTAG, "LoadingPageOnFailure======"); //+ new String(bytes));
                     resultState = ResultState.ERROR;
                     resultState.setContent("");
                     loadPage();

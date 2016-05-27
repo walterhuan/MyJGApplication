@@ -1,10 +1,10 @@
 package com.walter.sc.myjgapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
@@ -29,7 +29,7 @@ import butterknife.OnClick;
 import butterknife.OnItemClick;
 import butterknife.OnLongClick;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     private static final ButterKnife.Action<View> ALPHA_FADE = new ButterKnife.Action<View>() {
 
         @Override

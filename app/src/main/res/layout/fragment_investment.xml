@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_top"/>
 
     <TextView
+        android:id="@+id/investment_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Investment"
-        android:id="@+id/investment_textView"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:text="Investment"/>
+
+    <com.viewpagerindicator.TabPageIndicator
+        android:id="@+id/investment_tabIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/investment_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
 </LinearLayout>

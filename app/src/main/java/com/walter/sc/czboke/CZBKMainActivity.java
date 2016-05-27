@@ -1,7 +1,8 @@
 package com.walter.sc.czboke;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -91,7 +92,7 @@ public class CZBKMainActivity extends BaseActivity {
     }
 
     private void setSelection(int selection){
-        FragmentManager fragmentManager = getFragmentManager();
+        FragmentManager fragmentManager = getSupportFragmentManager();
         ft = fragmentManager.beginTransaction();
         reSetTab();
         hideFragemtn();
